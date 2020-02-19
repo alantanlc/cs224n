@@ -1,0 +1,50 @@
+# Doing your research example:
+
+Straightforward Class Project: Apply NNets to Task
+
+## 1. Define Task:
+- Example: Summarization
+
+## 2. Define Dataset
+1. Search for academic datasets
+  - They already have baselines
+  - e.g. Newsroom Summarization Dataset: [https://summari.es](https://summari.es]  
+2. Define your own data (harder, need new baselines)
+  - Allows connection to your research
+  - A fresh problem provides fresh opportunities!
+  - Be creative: Twitter, Blogs, News, etc. There are lots of neat websites which provide creative opportunities for new tasks
+
+## 3. Dataset hygiene
+  - Right at the beginning, separate off devtest and test splits
+  
+## 4. Define your metric(s)
+  - Search online for well established metrics on this task
+  - Summarization: Rouge (Recall-Oriented Understudy for Gisting Evaluation) which defines _n_-gram overlap to human summaries
+  - Human evaluation is still much better for summarization; you may be able to do a small scale human eval
+
+## 5. Establish a baseline
+  - Implement the simplest model first (often logistic regression on unigrams and bigrams or averaging word vectors)
+    - For summarization: See LEAD-3 baseline
+  - Compute metrics on train AND dev
+  - Analyze errors
+  - If metrics are amazing and no errors:
+    - Done! Problem was too easy. Need to restart. :) / :(
+    
+## 6. Implement existing neural net model
+  - Compute metric on train and dev
+  - Analyze output and errors
+  - Minimum bar for this class
+
+## 7. Always be close your data! (Except for the final test set!)
+  - Visualize the dataset
+  - Collect summary statistics
+  - Look at errors
+  - Analyze how different hyperparameters affect performance
+
+## 8. Try out different models and model variants. Aim to iterate quickly via having a good experimental setup.
+  - Fixed window neural model
+  - Recurrent neural network
+  - Recursive neural network
+  - Convolutional neural network
+  - Attention-based model
+  - ...
